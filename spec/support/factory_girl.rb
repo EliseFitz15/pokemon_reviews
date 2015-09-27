@@ -7,4 +7,11 @@ FactoryGirl.define do
     password_confirmation 'password'
   end
 
+  factory :pokemon do
+    name "Bulbasaur"
+    ability "Overgrow"
+    poketype "Grass"
+    strength 25
+    age 2
+  end
 end

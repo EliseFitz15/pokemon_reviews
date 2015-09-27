@@ -8,10 +8,12 @@ feature "As an authenticated user
   So that I can pick items to review" do
 
   scenario "authenticated user sees list" do
+    pokemon = FactoryGirl.create(:pokemon)
     sign_in
     visit pokemons_path
 
     expect(page).to have_content "Pokedex"
+    expect(page).to have_content pokemon.name
   end
   scenario "unauthenticated user does not see list" do
     visit pokemons_path
