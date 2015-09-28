@@ -14,4 +14,11 @@ FactoryGirl.define do
     strength 25
     age 2
   end
+
+  factory :review do
+    user
+    pokemon
+    body "Great in battles against watertypes"
+    rating 5
+  end
 end

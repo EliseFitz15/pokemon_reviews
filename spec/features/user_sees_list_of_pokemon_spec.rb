@@ -1,7 +1,7 @@
 require 'rails_helper'
 # Acceptance Test
-# [] Navigating to the /pokemon shows a list of all pokemon
-# [] User must be logged in to see all pokemon
+# [√] Navigating to the /pokemon shows a list of all pokemon
+# [√] User must be logged in to see all pokemon
 
 feature "As an authenticated user
   I want to view a list of pokemon
