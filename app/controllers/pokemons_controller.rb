@@ -5,6 +5,12 @@ before_action :authenticate_user!
     @pokemons = Pokemon.all
   end
 
+  def show
+    @pokemon = Pokemon.find(params[:id])
+    @reviews = @pokemon.reviews
+    @review = Review.new
+  end
+
   def new
     @pokemon = Pokemon.new
   end
