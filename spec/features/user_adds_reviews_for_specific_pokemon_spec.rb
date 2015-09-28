@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature "As an authenticated user
-I want to see to leave a review for a specific Pokemon
-so that others can get a review of their Pokemon" do
+I want to leave a review for a specific Pokemon
+so that others can get feedback about their Pokemon" do
   scenario 'user adds a review successfully' do
     @pokemon = FactoryGirl.create(:pokemon)
 
