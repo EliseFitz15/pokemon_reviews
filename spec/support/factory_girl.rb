@@ -13,6 +13,7 @@ FactoryGirl.define do
     poketype "Grass"
     strength 25
     age 2
+    user
   end
 
   factory :review do
