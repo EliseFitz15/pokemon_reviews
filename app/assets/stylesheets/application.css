@@ -13,5 +13,26 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
+
+.stats {
+  width: 300px;
+  background-color: #a4a4a4;
+  border-radius: 5%;
+}
+
+.stats h2 {
+  color: white;
+  text-align: center;
+}
+
+.stats ul li {
+  list-style: none;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+.stats ul li span {
+  font-weight: bold;
+}

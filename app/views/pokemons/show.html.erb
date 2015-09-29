@@ -1,12 +1,18 @@
 <h1><%= @pokemon.name %></h1>
-
-<h3>Stats</h3>
-<ul>
-  <li><%= @pokemon.age %></li>
-  <li><%= @pokemon.strength %></li>
-  <li><%= @pokemon.ability %></li>
-  <li><%= @pokemon.poketype %></li>
-</ul>
+<div class="clearfix">
+  <div class="stats panel right">
+    <h2 class="center">Stats</h2>
+    <ul>
+      <li><span>Age:</span> <%= @pokemon.age %></li>
+      <li><span>Strength:</span> <%= @pokemon.strength %></li>
+      <li><span>Ability:</span> <%= @pokemon.ability.capitalize %></li>
+      <li><span>Type:</span> <%= @pokemon.poketype.capitalize %></li>
+    </ul>
+  </div>
+  <div class="left">
+    <%= image_tag("psyduck.png") %>
+  </div>
+</div>
 
 <%= form_for [@pokemon, @review] do |f| %>
   <%= f.label :body, "Leave a review" %>
@@ -19,11 +25,13 @@
 <% end %>
 
 <h2>Reviews</h2>
-<div class="reviews">
   <% if @reviews.present? %>
     <% @reviews.each do |review| %>
-      Rating: <%= review.rating %>
-      Review: <%= review.body %>
+      <div class="reviews panel">
+        <ul>
+          <li>Rating: <%= review.rating %></li>
+          <li>Review: <%= review.body %></li>
+        </ul>
+      </div>
     <% end %>
   <% end %>
-</div>
