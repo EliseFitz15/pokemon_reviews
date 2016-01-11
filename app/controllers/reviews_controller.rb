@@ -7,7 +7,6 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      ReviewMailer.new_review(@review).deliver_later
       flash[:notice] = "Review added"
       redirect_to pokemon_path(@pokemon)
     else

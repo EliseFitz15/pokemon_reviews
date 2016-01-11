@@ -3,9 +3,6 @@ include UserSignIn
 
 
 RSpec.configure do |config|
-  config.before :each do
-    ActionMailer::Base.deliveries.clear
-  end
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
